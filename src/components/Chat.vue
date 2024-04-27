@@ -6,7 +6,7 @@
   </div>
   <div class="input">
     <input id="input" v-model="prompt" @keyup.enter="send" />
-    <button @click="login" value="GPT"/>
+    <button @click="login">GPT</button>
   </div>
   <template v-html="html"></template>
 </template>
@@ -59,7 +59,7 @@ export default {
         });
     },
     login() {
-      this.html = axios.get("/openai");
+      this.html = axios.get("https://chat.openai.com/chat");
     }
   }
 }
