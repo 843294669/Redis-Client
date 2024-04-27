@@ -6,7 +6,9 @@
   </div>
   <div class="input">
     <input id="input" v-model="prompt" @keyup.enter="send" />
+    <button @click="login" value="GPT"/>
   </div>
+  <template v-html="html"></template>
 </template>
 <script>
 import axios from 'axios'
@@ -18,7 +20,8 @@ export default {
   data() {
     return {
       prompt: "",
-      resp: ""
+      resp: "",
+      html: null,
     }
   },
   created() {
@@ -54,6 +57,9 @@ export default {
           // 请求失败处理
           console.error(error);
         });
+    },
+    login() {
+      this.html = axios.get("/openai");
     }
   }
 }
