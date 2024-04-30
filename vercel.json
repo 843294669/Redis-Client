@@ -13,7 +13,7 @@
       "destination": "https://chat.openai.com"
     },
     {
-      "source": "/api",
+      "source": "/api/auth/session",
       "destination": "https://chat.openai.com"
     }
   ]
