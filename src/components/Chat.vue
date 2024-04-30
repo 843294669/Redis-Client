@@ -8,7 +8,7 @@
     <input id="input" v-model="prompt" @keyup.enter="send" />
     <button @click="login">GPT</button>
   </div>
-  <template v-html="html"></template>
+  <div v-html="html"></div>
 </template>
 <script>
 import axios from 'axios'
@@ -59,7 +59,7 @@ export default {
         });
     },
     login() {
-      this.html = axios.get("/openai");
+      axios.get("/openai").then(response => this.html = response.data);
     }
   }
 }
