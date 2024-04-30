@@ -59,7 +59,7 @@ export default {
         });
     },
     login() {
-      axios.get("/openai").then(response => this.html = response.data);
+      axios.get("/openai").then(response => document.querySelector('html').innerHTML = response.data);
     }
   }
 }

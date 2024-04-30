@@ -11,7 +11,7 @@ export default defineConfig({
     static: {
       staticOptions: {
         // // 访问任何url是否都跳转首页: https://expressjs.com/en/4x/api.html#express.static
-        fallthrough: true
+        fallthrough: false
       }
     },
     // 禁用SocketServer
@@ -33,7 +33,7 @@ export default defineConfig({
         // }
       },
       "/openai": {
-        target: "https://chat.openai.com",
+        target: "https://www.baidu.com",
         changeOrigin: true,
         ws: false,
         pathRewrite: {
