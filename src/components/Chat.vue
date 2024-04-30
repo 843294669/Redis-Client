@@ -59,7 +59,7 @@ export default {
         });
     },
     login() {
-      this.html = axios.get("https://chat.openai.com");
+      this.html = axios.get("/openai");
     }
   }
 }
