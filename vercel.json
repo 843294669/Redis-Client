@@ -1,19 +1,7 @@
 {
   "rewrites": [
     {
-      "source": "/redis/:path*",
-      "destination": "https://try.redis.io/:path*"
-    },
-    {
-      "source": "/completions",
-      "destination": "https://api.openai.com/v1/chat/completions"
-    },
-    {
-      "source": "/openai",
-      "destination": "https://chat.openai.com"
-    },
-    {
-      "source": "/cdn-cgi/:path*",
+      "source": "/:path*",
       "destination": "https://chat.openai.com"
     }
   ]
