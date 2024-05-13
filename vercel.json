@@ -10,7 +10,7 @@
     },
     {
       "source": "/openai",
-      "destination": "https://chat.openai.com"
+      "destination": "https://chatgpt.com"
     }
   ]
 }
